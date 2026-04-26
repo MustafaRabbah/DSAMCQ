@@ -147,7 +147,10 @@ body {
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
+  min-height: 100dvh;
   transition: background 0.3s ease, color 0.2s ease;
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0)
+    env(safe-area-inset-left, 0);
 }
 
 [data-theme="dark"] body {
@@ -531,6 +534,9 @@ input[type="range"]::-moz-range-thumb {
 .card-body.animate-in .option-btn:nth-child(4) {
   animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.19s backwards;
 }
+.card-body.animate-in .option-btn:nth-child(5) {
+  animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.24s backwards;
+}
 
 .hidden {
   display: none !important;
@@ -598,6 +604,32 @@ input[type="range"]::-moz-range-thumb {
   direction: ltr;
   cursor: pointer;
   transition: transform 0.12s, border-color 0.15s, box-shadow 0.15s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+}
+
+.option-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.option-text {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.option-ar {
+  font-family: var(--font-ar);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.45;
+  text-align: right;
+  direction: rtl;
 }
 
 .option-btn:hover:not(:disabled) {
@@ -722,11 +754,14 @@ kbd {
   font-family: var(--font-ar);
   font-size: 0.95rem;
   font-weight: 700;
-  padding: 0.6rem 1.25rem;
+  padding: 0.65rem 1.25rem;
+  min-height: 48px;
   border-radius: 12px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn:active:not(:disabled) {
@@ -927,5 +962,77 @@ kbd {
   .btn-compact {
     align-self: center;
     flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .header-inner {
+    padding: 0.85rem 1rem;
+  }
+  .site-title {
+    font-size: 1.15rem;
+  }
+  .site-tagline {
+    font-size: 0.8rem;
+  }
+  .main {
+    padding: 1rem 1rem 2.5rem;
+  }
+  .practice-tools {
+    padding: 0.85rem 1rem;
+  }
+  .card-body {
+    padding: 1.15rem 1rem 1.2rem;
+  }
+  .question-text {
+    font-size: 1rem;
+  }
+  .question-block.ltr .question-text {
+    font-size: 0.98rem;
+  }
+  .option-btn {
+    padding: 0.85rem 0.95rem;
+    font-size: 0.92rem;
+    gap: 0.65rem;
+  }
+  .option-key {
+    width: 1.85rem;
+    height: 1.85rem;
+    font-size: 0.8rem;
+  }
+  .card-nav {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .card-nav .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .segmented-btn {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .exam-setup-card {
+    padding: 1.25rem 1.1rem;
+  }
+  .summary-dialog {
+    max-height: min(90dvh, 100%);
+    overflow-y: auto;
+  }
+  .hint {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
   }
 }

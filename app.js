@@ -1,5 +1,27 @@
-const LETTERS = ["A", "B", "C", "D"];
 const SITE_NAME = "هياكل البيانات والخوارزميات";
+
+/** @param {{ options?: Record<string, string> }} item */
+function optionLetters(item) {
+  return Object.keys(item.options || {}).sort();
+}
+
+/** @param {string} s */
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** @param {any} item */
+function searchHaystack(item) {
+  const qEn = item.question?.en ?? "";
+  const qAr = item.question?.ar ?? "";
+  const opts = Object.values(item.options ?? {}).join(" ");
+  const optsAr = Object.values(item.optionsAr ?? {}).join(" ");
+  return `${qEn} ${qAr} ${opts} ${optsAr}`.toLowerCase();
+}
 
 const els = {
   bankTitle: document.getElementById("bankTitle"),
@@ -182,9 +204,9 @@ function applySearch() {
     order = data.questions.map((_, i) => i);
   } else {
     order = [];
+    const needle = q.normalize("NFC");
     data.questions.forEach((item, i) => {
-      const hay = `${item.question.en} ${item.question.ar}`.toLowerCase();
-      if (hay.includes(q)) order.push(i);
+      if (searchHaystack(item).normalize("NFC").includes(needle)) order.push(i);
     });
   }
   pos = 0;
@@ -258,15 +280,18 @@ function render() {
   }
 
   els.optionsGrid.innerHTML = "";
-  LETTERS.forEach((L) => {
+  const letters = optionLetters(item);
+  letters.forEach((L) => {
     const text = item.options[L] ?? "";
+    const ar = item.optionsAr?.[L]?.trim();
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "option-btn";
     btn.setAttribute("role", "radio");
     btn.setAttribute("aria-checked", "false");
     btn.dataset.letter = L;
-    btn.innerHTML = `<span class="option-key">${L}</span><span class="option-text"></span>`;
+    const arHtml = ar ? `<span class="option-ar" lang="ar">${escapeHtml(ar)}</span>` : "";
+    btn.innerHTML = `<span class="option-key">${L}</span><span class="option-body"><span class="option-text"></span>${arHtml}</span>`;
     btn.querySelector(".option-text").textContent = text || "(لا نص في المصدر)";
     btn.addEventListener("click", () => choose(L));
     els.optionsGrid.appendChild(btn);
@@ -339,7 +364,10 @@ function showFeedback(letter) {
   els.feedbackBanner.classList.add(ok ? "ok" : "bad", ok ? "pulse-ok" : "pulse-bad");
 
   const correctText = item.options[item.correct] ?? "";
-  els.correctOption.textContent = `${item.correct}) ${correctText}`;
+  const correctAr = item.optionsAr?.[item.correct]?.trim();
+  els.correctOption.textContent = correctAr
+    ? `${item.correct}) ${correctText} — ${correctAr}`
+    : `${item.correct}) ${correctText}`;
   els.explanation.textContent = item.explanation;
 
   els.optionsGrid.querySelectorAll(".option-btn").forEach((btn) => {
@@ -417,9 +445,10 @@ async function init() {
       e.preventDefault();
       go(e.key === "ArrowRight" ? 1 : -1);
     }
-    if (!revealed && /^[1-4]$/.test(e.key)) {
-      const L = LETTERS[Number(e.key) - 1];
-      choose(L);
+    if (!revealed && /^[1-9]$/.test(e.key) && data && order.length > 0) {
+      const letters = optionLetters(currentQuestion());
+      const n = Number(e.key) - 1;
+      if (n >= 0 && n < letters.length) choose(letters[n]);
     }
     if (revealed && e.key === "Enter" && !els.btnNext.disabled) {
       e.preventDefault();
@@ -431,8 +460,9 @@ async function init() {
     const res = await fetch("questions.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
-    els.bankTitle.textContent = SITE_NAME;
-    document.title = `${SITE_NAME} — MCQ`;
+    const title = typeof data.title === "string" && data.title.trim() ? data.title.trim() : SITE_NAME;
+    els.bankTitle.textContent = title;
+    document.title = `${title} — MCQ`;
     order = data.questions.map((_, i) => i);
     updateExamBankHint();
     els.examSizeValue.textContent = els.examSlider.value;

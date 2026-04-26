@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4f46e5" />
     <meta
       name="description"
       content="هياكل البيانات والخوارزميات — بنك أسئلة تفاعلي للمراجعة والاختبار."
@@ -65,13 +66,14 @@
               </div>
             </div>
             <label class="search-wrap">
-              <span class="visually-hidden">بحث في نص السؤال</span>
+              <span class="visually-hidden">بحث في السؤال والترجمة ونصوص الخيارات</span>
               <input
                 type="search"
                 id="searchInput"
                 class="search-input"
-                placeholder="بحث في السؤال…"
+                placeholder="بحث (عربي/إنجليزي، السؤال والخيارات)…"
                 autocomplete="off"
+                enterkeyhint="search"
               />
             </label>
             <button type="button" class="btn btn-secondary btn-compact" id="btnShuffle" title="خلط ترتيب الأسئلة">
@@ -83,7 +85,7 @@
         <div id="examSetup" class="exam-setup hidden">
           <div class="exam-setup-card">
             <h2 class="exam-setup-title">ابنِ اختبارك</h2>
-            <p class="exam-setup-desc">يُختار عشوائياً من بنك الأسئلة المدمَج (المراجعة + محاضرات PDF).</p>
+            <p class="exam-setup-desc">يُختار عشوائياً من بنك الأسئلة الحالي (ملف bank.txt).</p>
             <div class="slider-block">
               <div class="slider-head">
                 <label for="examSizeSlider">عدد الأسئلة</label>
@@ -133,8 +135,8 @@
             <button type="button" class="btn btn-secondary" id="btnPrev">السابق</button>
             <button type="button" class="btn btn-primary" id="btnNext">التالي</button>
           </nav>
-          <p class="hint">
-            اختصارات: <kbd>←</kbd> <kbd>→</kbd> للتنقل، <kbd>1</kbd>–<kbd>4</kbd> للخيارات،
+          <p class="hint" id="shortcutsHint">
+            اختصارات: <kbd>←</kbd> <kbd>→</kbd> للتنقل، <kbd>1</kbd>–<kbd>5</kbd> للخيارات (حسب العدد)،
             <kbd>Enter</kbd> للتالي بعد الإجابة.
           </p>
         </div>
