@@ -1,0 +1,1835 @@
+{
+  "title": "أسئلة مولَّدة من محاضرات PDF (DSA)",
+  "questions": [
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «InsertAtBeginning»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes a node from a given position of the linked-list.",
+        "B": "Attaches a new node at the start of the linked-list.",
+        "C": "Removes the node present at the end of the linked-list.",
+        "D": "Attaches a new node at a specific position in the linked-list."
+      },
+      "correct": "B",
+      "explanation": "Attaches a new node at the start of the linked-list.",
+      "id": 1
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «InsertAtEnd»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes the node present at the end of the linked-list.",
+        "B": "Attaches a new node at a specific position in the linked-list.",
+        "C": "Removes the Head of the linked-list and updates the Head to the next node.",
+        "D": "Attaches a new node at the end of the linked-list."
+      },
+      "correct": "D",
+      "explanation": "Attaches a new node at the end of the linked-list.",
+      "id": 2
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «InsertAtPosition»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes the node present at the end of the linked-list.",
+        "B": "Prints all the values of the nodes present in the linked-list.",
+        "C": "Attaches a new node at a specific position in the linked-list.",
+        "D": "Removes the Head of the linked-list and updates the Head to the next node."
+      },
+      "correct": "C",
+      "explanation": "Attaches a new node at a specific position in the linked-list.",
+      "id": 3
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «DeleteFromBeginning»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Prints all the values of the nodes present in the linked-list.",
+        "B": "Removes the Head of the linked-list and updates the Head to the next node.",
+        "C": "access each element of the linked list",
+        "D": "Removes the node present at the end of the linked-list."
+      },
+      "correct": "B",
+      "explanation": "Removes the Head of the linked-list and updates the Head to the next node.",
+      "id": 4
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «DeleteFromEnd»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes the node present at the end of the linked-list.",
+        "B": "access each element of the linked list",
+        "C": "Prints all the values of the nodes present in the linked-list.",
+        "D": "Removes the Head of the linked-list and updates the Head to the next node."
+      },
+      "correct": "A",
+      "explanation": "Removes the node present at the end of the linked-list.",
+      "id": 5
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «DeleteFromPosition»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes a node from a given position of the linked-list.",
+        "B": "Attaches a new node at a specific position in the linked-list.",
+        "C": "Attaches a new node at the end of the linked-list.",
+        "D": "Removes the node present at the end of the linked-list."
+      },
+      "correct": "A",
+      "explanation": "Removes a node from a given position of the linked-list.",
+      "id": 6
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «Display»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Removes a node from a given position of the linked-list.",
+        "B": "Attaches a new node at a specific position in the linked-list.",
+        "C": "Prints all the values of the nodes present in the linked-list.",
+        "D": "Removes the Head of the linked-list and updates the Head to the next node."
+      },
+      "correct": "C",
+      "explanation": "Prints all the values of the nodes present in the linked-list.",
+      "id": 7
+    },
+    {
+      "question": {
+        "en": "In a singly linked list, which description matches the operation «Traversal»? (Lec 6 DSA Linked List)",
+        "ar": ""
+      },
+      "options": {
+        "A": "access each element of the linked list",
+        "B": "Removes the node present at the end of the linked-list.",
+        "C": "Attaches a new node at the end of the linked-list.",
+        "D": "Removes a node from a given position of the linked-list."
+      },
+      "correct": "A",
+      "explanation": "access each element of the linked list",
+      "id": 8
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «Push»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that returns true if the stack is full, then it is said to be an Overflow condition else returns false.",
+        "B": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack.",
+        "C": "removes the last data value on top of the stack",
+        "D": "is a function that returns the number of elements in the stack."
+      },
+      "correct": "B",
+      "explanation": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack.",
+      "id": 9
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «Pop»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "removes the last data value on top of the stack",
+        "B": "is a function that returns the number of elements in the stack.",
+        "C": "is a function that check if the stack is empty. Returns true if stack is empty else returns false.",
+        "D": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack."
+      },
+      "correct": "A",
+      "explanation": "removes the last data value on top of the stack",
+      "id": 10
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «Peek»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that returns true if the stack is full, then it is said to be an Overflow condition else returns false.",
+        "B": "returns the top data value of the stack, without removing it.",
+        "C": "is a function that check if the stack is empty. Returns true if stack is empty else returns false.",
+        "D": "is a function that returns the number of elements in the stack."
+      },
+      "correct": "B",
+      "explanation": "returns the top data value of the stack, without removing it.",
+      "id": 11
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «IsEmpty»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that check if the stack is empty. Returns true if stack is empty else returns false.",
+        "B": "is a function that returns true if the stack is full, then it is said to be an Overflow condition else returns false.",
+        "C": "is a function that returns the number of elements in the stack.",
+        "D": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack."
+      },
+      "correct": "A",
+      "explanation": "is a function that check if the stack is empty. Returns true if stack is empty else returns false.",
+      "id": 12
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «IsFull»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that returns true if the stack is full, then it is said to be an Overflow condition else returns false.",
+        "B": "is a function that returns the number of elements in the stack.",
+        "C": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack.",
+        "D": "is a function that check if the stack is empty. Returns true if stack is empty else returns false."
+      },
+      "correct": "A",
+      "explanation": "is a function that returns true if the stack is full, then it is said to be an Overflow condition else returns false.",
+      "id": 13
+    },
+    {
+      "question": {
+        "en": "In a stack, which description matches the operation «Size»? (Lec 4 DSA Stack)",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that returns the number of elements in the stack.",
+        "B": "removes the last data value on top of the stack",
+        "C": "adds a data value to the top of the stack (pushed). There is no way to inserting element at any other position of the stack.",
+        "D": "returns the top data value of the stack, without removing it."
+      },
+      "correct": "A",
+      "explanation": "is a function that returns the number of elements in the stack.",
+      "id": 14
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «Enqueue»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Returns the total numbers of elements present in the queue",
+        "B": "Inserts an element into the queue using the rear pointer.",
+        "C": "Returns the element at the front end without removing it.",
+        "D": "Returns the element at the rear end without removing it."
+      },
+      "correct": "B",
+      "explanation": "Inserts an element into the queue using the rear pointer.",
+      "id": 15
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «Dequeue»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Inserts an element into the queue using the rear pointer.",
+        "B": "Returns the element at the front end without removing it.",
+        "C": "Returns the total numbers of elements present in the queue",
+        "D": "Deletes an element from the queue using the front pointer and returns it."
+      },
+      "correct": "D",
+      "explanation": "Deletes an element from the queue using the front pointer and returns it.",
+      "id": 16
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «Size»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Returns the element at the rear end without removing it.",
+        "B": "Deletes an element from the queue using the front pointer and returns it.",
+        "C": "Inserts an element into the queue using the rear pointer.",
+        "D": "Returns the total numbers of elements present in the queue"
+      },
+      "correct": "D",
+      "explanation": "Returns the total numbers of elements present in the queue",
+      "id": 17
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «front()»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Returns the total numbers of elements present in the queue",
+        "B": "Returns the element at the front end without removing it.",
+        "C": "Returns true if the queue is fully and there is no space left.",
+        "D": "Returns true if the queue is empty."
+      },
+      "correct": "B",
+      "explanation": "Returns the element at the front end without removing it.",
+      "id": 18
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «rear()»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Inserts an element into the queue using the rear pointer.",
+        "B": "Returns the element at the rear end without removing it.",
+        "C": "Returns the element at the front end without removing it.",
+        "D": "Returns true if the queue is empty."
+      },
+      "correct": "B",
+      "explanation": "Returns the element at the rear end without removing it.",
+      "id": 19
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «isEmpty»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Inserts an element into the queue using the rear pointer.",
+        "B": "Returns true if the queue is empty.",
+        "C": "Deletes an element from the queue using the front pointer and returns it.",
+        "D": "Returns true if the queue is fully and there is no space left."
+      },
+      "correct": "B",
+      "explanation": "Returns true if the queue is empty.",
+      "id": 20
+    },
+    {
+      "question": {
+        "en": "In an array-based queue, which description matches the operation «isFull»? (Lec 5 DSA Queue)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Returns the total numbers of elements present in the queue",
+        "B": "Returns the element at the front end without removing it.",
+        "C": "Returns the element at the rear end without removing it.",
+        "D": "Returns true if the queue is fully and there is no space left."
+      },
+      "correct": "D",
+      "explanation": "Returns true if the queue is fully and there is no space left.",
+      "id": 21
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Prerequisite»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Shift elements to the right to create empty location for the new",
+        "B": "The array must be sorted in ascending or descending order.",
+        "C": "Print the updated array and terminate the process.",
+        "D": "Ensure the position is within the valid range of the array."
+      },
+      "correct": "B",
+      "explanation": "Prerequisite: The array must be sorted in ascending or descending order.",
+      "id": 22
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Check Position»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "The array must be sorted in ascending or descending order.",
+        "B": "increase the size of the array.",
+        "C": "Shift elements to the left to fill the gap created by the deleted",
+        "D": "Ensure the position is within the valid range of the array."
+      },
+      "correct": "D",
+      "explanation": "Check Position: Ensure the position is within the valid range of the array.",
+      "id": 23
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Shift Elements»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Print the updated array to verify the deletion and terminate the process.",
+        "B": "Ensure the position is within the valid range of the array.",
+        "C": "Shift elements to the right to create empty location for the new",
+        "D": "Shift elements to the left to fill the gap created by the deleted"
+      },
+      "correct": "D",
+      "explanation": "Shift Elements: Shift elements to the left to fill the gap created by the deleted",
+      "id": 24
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Update Size»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Decrease the size of the array.",
+        "B": "Ensure the position is within the valid range of the array.",
+        "C": "increase the size of the array.",
+        "D": "Print the updated array and terminate the process."
+      },
+      "correct": "A",
+      "explanation": "Update Size: Decrease the size of the array.",
+      "id": 25
+    },
+    {
+      "question": {
+        "en": "Which description best matches «End»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Shift elements to the left to fill the gap created by the deleted",
+        "B": "Ensure the position is within the valid range of the array.",
+        "C": "Print the updated array to verify the deletion and terminate the process.",
+        "D": "The array must be sorted in ascending or descending order."
+      },
+      "correct": "C",
+      "explanation": "End: Print the updated array to verify the deletion and terminate the process.",
+      "id": 26
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Update Size»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "The array must be sorted in ascending or descending order.",
+        "B": "Print the updated array and terminate the process.",
+        "C": "Print the updated array to verify the deletion and terminate the process.",
+        "D": "increase the size of the array."
+      },
+      "correct": "D",
+      "explanation": "Update Size: increase the size of the array.",
+      "id": 27
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Check Position»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Ensure the position is within the valid range of the array.",
+        "B": "Shift elements to the right to create empty location for the new",
+        "C": "increase the size of the array.",
+        "D": "Shift elements to the left to fill the gap created by the deleted"
+      },
+      "correct": "A",
+      "explanation": "Check Position: Ensure the position is within the valid range of the array.",
+      "id": 28
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Shift Elements»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "increase the size of the array.",
+        "B": "Shift elements to the right to create empty location for the new",
+        "C": "Print the updated array to verify the deletion and terminate the process.",
+        "D": "The array must be sorted in ascending or descending order."
+      },
+      "correct": "B",
+      "explanation": "Shift Elements: Shift elements to the right to create empty location for the new",
+      "id": 29
+    },
+    {
+      "question": {
+        "en": "Which description best matches «End»? (Lec 3 DSA Operations in array )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Print the updated array and terminate the process.",
+        "B": "Shift elements to the left to fill the gap created by the deleted",
+        "C": "Ensure the position is within the valid range of the array.",
+        "D": "Decrease the size of the array."
+      },
+      "correct": "A",
+      "explanation": "End: Print the updated array and terminate the process.",
+      "id": 30
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Size»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the maximum size of the stack or the number of possibly",
+        "B": "is the situation when the stack is full and no more elements can be",
+        "C": "removes the last data value on top of the stack",
+        "D": "returns the top data value of the stack, without removing it."
+      },
+      "correct": "A",
+      "explanation": "Size: this term refers to the maximum size of the stack or the number of possibly",
+      "id": 31
+    },
+    {
+      "question": {
+        "en": "Which description best matches «TOP»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "adds a data value to the top of the stack (pushed). There is no way to",
+        "B": "this term refers to the maximum size of the stack or the number of possibly",
+        "C": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "D": "removes the last data value on top of the stack"
+      },
+      "correct": "C",
+      "explanation": "TOP: this term refers to the top of the stack. It is a stack pointer used to check overflow",
+      "id": 32
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Stack underflow»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "is a function that returns the number of elements in the stack.",
+        "B": "is the situation when the stack contains no elements. At this point",
+        "C": "returns the top data value of the stack, without removing it.",
+        "D": "adds a data value to the top of the stack (pushed). There is no way to"
+      },
+      "correct": "B",
+      "explanation": "Stack underflow: is the situation when the stack contains no elements. At this point",
+      "id": 33
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Stack overflow»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "B": "is a function that check if the stack is empty. Returns true if stack is",
+        "C": "is the situation when the stack is full and no more elements can be",
+        "D": "returns the top data value of the stack, without removing it."
+      },
+      "correct": "C",
+      "explanation": "Stack overflow: is the situation when the stack is full and no more elements can be",
+      "id": 34
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Push( )»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the maximum size of the stack or the number of possibly",
+        "B": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "C": "removes the last data value on top of the stack",
+        "D": "adds a data value to the top of the stack (pushed). There is no way to"
+      },
+      "correct": "D",
+      "explanation": "Push( ): adds a data value to the top of the stack (pushed). There is no way to",
+      "id": 35
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Pop»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the maximum size of the stack or the number of possibly",
+        "B": "removes the last data value on top of the stack",
+        "C": "is a function that check if the stack is empty. Returns true if stack is",
+        "D": "is a function that returns true if the stack is full, then it is said to be an"
+      },
+      "correct": "B",
+      "explanation": "Pop: removes the last data value on top of the stack",
+      "id": 36
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Peek»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "B": "is the situation when the stack is full and no more elements can be",
+        "C": "is the situation when the stack contains no elements. At this point",
+        "D": "returns the top data value of the stack, without removing it."
+      },
+      "correct": "D",
+      "explanation": "Peek: returns the top data value of the stack, without removing it.",
+      "id": 37
+    },
+    {
+      "question": {
+        "en": "Which description best matches «IsEmpty»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "returns the top data value of the stack, without removing it.",
+        "B": "is the situation when the stack is full and no more elements can be",
+        "C": "is a function that check if the stack is empty. Returns true if stack is",
+        "D": "this term refers to the maximum size of the stack or the number of possibly"
+      },
+      "correct": "C",
+      "explanation": "IsEmpty: is a function that check if the stack is empty. Returns true if stack is",
+      "id": 38
+    },
+    {
+      "question": {
+        "en": "Which description best matches «IsFull»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "adds a data value to the top of the stack (pushed). There is no way to",
+        "B": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "C": "returns the top data value of the stack, without removing it.",
+        "D": "is a function that returns true if the stack is full, then it is said to be an"
+      },
+      "correct": "D",
+      "explanation": "IsFull: is a function that returns true if the stack is full, then it is said to be an",
+      "id": 39
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Size»? (Lec 4 DSA Stack )",
+        "ar": ""
+      },
+      "options": {
+        "A": "this term refers to the top of the stack. It is a stack pointer used to check overflow",
+        "B": "this term refers to the maximum size of the stack or the number of possibly",
+        "C": "is a function that check if the stack is empty. Returns true if stack is",
+        "D": "is a function that returns the number of elements in the stack."
+      },
+      "correct": "D",
+      "explanation": "Size: is a function that returns the number of elements in the stack.",
+      "id": 40
+    },
+    {
+      "question": {
+        "en": "Which description best matches «It has mainly (2) pointers to perform operations»? (Lec 5 DSA Queue )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Size refers to the current number of elements in the queue.",
+        "B": "Capacity refers to the maximum number of elements the queue can hold.",
+        "C": "Front & Rear. The Rear is for insertion",
+        "D": "Position of the last entry in the queue, that is, the one most recently added, is"
+      },
+      "correct": "C",
+      "explanation": "It has mainly (2) pointers to perform operations: Front & Rear. The Rear is for insertion",
+      "id": 41
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Front»? (Lec 5 DSA Queue )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Capacity refers to the maximum number of elements the queue can hold.",
+        "B": "Position of the last entry in the queue, that is, the one most recently added, is",
+        "C": "Position of the entry in a queue ready to be served, that is, the first entry that",
+        "D": "Front & Rear. The Rear is for insertion"
+      },
+      "correct": "C",
+      "explanation": "Front: Position of the entry in a queue ready to be served, that is, the first entry that",
+      "id": 42
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Rear»? (Lec 5 DSA Queue )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Position of the entry in a queue ready to be served, that is, the first entry that",
+        "B": "Size refers to the current number of elements in the queue.",
+        "C": "Position of the last entry in the queue, that is, the one most recently added, is",
+        "D": "Capacity refers to the maximum number of elements the queue can hold."
+      },
+      "correct": "C",
+      "explanation": "Rear: Position of the last entry in the queue, that is, the one most recently added, is",
+      "id": 43
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Size»? (Lec 5 DSA Queue )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Size refers to the current number of elements in the queue.",
+        "B": "Capacity refers to the maximum number of elements the queue can hold.",
+        "C": "Front & Rear. The Rear is for insertion",
+        "D": "Position of the last entry in the queue, that is, the one most recently added, is"
+      },
+      "correct": "A",
+      "explanation": "Size: Size refers to the current number of elements in the queue.",
+      "id": 44
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Capacity»? (Lec 5 DSA Queue )",
+        "ar": ""
+      },
+      "options": {
+        "A": "Position of the entry in a queue ready to be served, that is, the first entry that",
+        "B": "Position of the last entry in the queue, that is, the one most recently added, is",
+        "C": "Capacity refers to the maximum number of elements the queue can hold.",
+        "D": "Front & Rear. The Rear is for insertion"
+      },
+      "correct": "C",
+      "explanation": "Capacity: Capacity refers to the maximum number of elements the queue can hold.",
+      "id": 45
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Integer»? (introduction to DSA )",
+        "ar": ""
+      },
+      "options": {
+        "A": "It represents individual characters, usually stored as a single byte.",
+        "B": "It is used to represent numbers with decimals or floating-point numbers.",
+        "C": "It is used to represent whole numbers (positive or negative).",
+        "D": "It represents a value of either true or false."
+      },
+      "correct": "C",
+      "explanation": "Integer: It is used to represent whole numbers (positive or negative).",
+      "id": 46
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Float»? (introduction to DSA )",
+        "ar": ""
+      },
+      "options": {
+        "A": "It represents individual characters, usually stored as a single byte.",
+        "B": "It is used to represent whole numbers (positive or negative).",
+        "C": "It is used to represent numbers with decimals or floating-point numbers.",
+        "D": "It represents a sequence of characters."
+      },
+      "correct": "C",
+      "explanation": "Float: It is used to represent numbers with decimals or floating-point numbers.",
+      "id": 47
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Character»? (introduction to DSA )",
+        "ar": ""
+      },
+      "options": {
+        "A": "It is used to represent numbers with decimals or floating-point numbers.",
+        "B": "It represents a value of either true or false.",
+        "C": "It is used to represent whole numbers (positive or negative).",
+        "D": "It represents individual characters, usually stored as a single byte."
+      },
+      "correct": "D",
+      "explanation": "Character: It represents individual characters, usually stored as a single byte.",
+      "id": 48
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Boolean»? (introduction to DSA )",
+        "ar": ""
+      },
+      "options": {
+        "A": "It is used to represent numbers with decimals or floating-point numbers.",
+        "B": "It is used to represent whole numbers (positive or negative).",
+        "C": "It represents individual characters, usually stored as a single byte.",
+        "D": "It represents a value of either true or false."
+      },
+      "correct": "D",
+      "explanation": "Boolean: It represents a value of either true or false.",
+      "id": 49
+    },
+    {
+      "question": {
+        "en": "Which description best matches «String»? (introduction to DSA )",
+        "ar": ""
+      },
+      "options": {
+        "A": "It represents a value of either true or false.",
+        "B": "It is used to represent whole numbers (positive or negative).",
+        "C": "It represents individual characters, usually stored as a single byte.",
+        "D": "It represents a sequence of characters."
+      },
+      "correct": "D",
+      "explanation": "String: It represents a sequence of characters.",
+      "id": 50
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Initialization»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Looking for something specific? Searching is the answer.",
+        "B": "It is means defining the type of array and assigning it values. The",
+        "C": "Elements in an array can be accessed by their index, which",
+        "D": "Deletion is the opposite of insertion and involves removing"
+      },
+      "correct": "B",
+      "explanation": "Initialization: It is means defining the type of array and assigning it values. The",
+      "id": 51
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Accessing elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Traversing arrays involves looping through each element in the array and",
+        "B": "Elements in an array can be accessed by their index, which",
+        "C": "Looking for something specific? Searching is the answer.",
+        "D": "Deletion is the opposite of insertion and involves removing"
+      },
+      "correct": "B",
+      "explanation": "Accessing elements: Elements in an array can be accessed by their index, which",
+      "id": 52
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Searching for elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Looking for something specific? Searching is the answer.",
+        "B": "Elements in an array can be accessed by their index, which",
+        "C": "Elements can be inserted into an array at a specific location, but",
+        "D": "It is means defining the type of array and assigning it values. The"
+      },
+      "correct": "A",
+      "explanation": "Searching for elements: Looking for something specific? Searching is the answer.",
+      "id": 53
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Sorting elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Elements in an array can be accessed by their index, which",
+        "B": "Deletion is the opposite of insertion and involves removing",
+        "C": "Sorting is a process of arranging elements of an array in either",
+        "D": "It is means defining the type of array and assigning it values. The"
+      },
+      "correct": "C",
+      "explanation": "Sorting elements: Sorting is a process of arranging elements of an array in either",
+      "id": 54
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Inserting elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Deletion is the opposite of insertion and involves removing",
+        "B": "Elements can be inserted into an array at a specific location, but",
+        "C": "Traversing arrays involves looping through each element in the array and",
+        "D": "It is means defining the type of array and assigning it values. The"
+      },
+      "correct": "B",
+      "explanation": "Inserting elements: Elements can be inserted into an array at a specific location, but",
+      "id": 55
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Deleting elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "It is means defining the type of array and assigning it values. The",
+        "B": "Deletion is the opposite of insertion and involves removing",
+        "C": "Traversing arrays involves looping through each element in the array and",
+        "D": "Elements in an array can be accessed by their index, which"
+      },
+      "correct": "B",
+      "explanation": "Deleting elements: Deletion is the opposite of insertion and involves removing",
+      "id": 56
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Updating elements»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Looking for something specific? Searching is the answer.",
+        "B": "Deletion is the opposite of insertion and involves removing",
+        "C": "Traversing arrays involves looping through each element in the array and",
+        "D": "Elements in an array can be updated or modified by assigning a"
+      },
+      "correct": "D",
+      "explanation": "Updating elements: Elements in an array can be updated or modified by assigning a",
+      "id": 57
+    },
+    {
+      "question": {
+        "en": "Which description best matches «Traversing»? (lec 2 DSA array)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Elements can be inserted into an array at a specific location, but",
+        "B": "Traversing arrays involves looping through each element in the array and",
+        "C": "Looking for something specific? Searching is the answer.",
+        "D": "Sorting is a process of arranging elements of an array in either"
+      },
+      "correct": "B",
+      "explanation": "Traversing: Traversing arrays involves looping through each element in the array and",
+      "id": 58
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "All the leaf elements must lean towards the left.",
+        "B": "In a normal tree, every node can have any number of children.",
+        "C": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+        "D": "A weighted graph is a graph where each edge has a number (weight) that represents distance,"
+      },
+      "correct": "D",
+      "explanation": "A weighted graph is a graph where each edge has a number (weight) that represents distance,",
+      "id": 59
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "An unweighted graph is a graph where all edges are treated equally, with no extra values like",
+        "B": "A Directed Graph in which edge has direction. That is the nodes are ordered pairs in the",
+        "C": "A Undirected Graph in which edges do not have any direction. That is the nodes are",
+        "D": "A weighted graph is a graph where each edge has a number (weight) that represents distance,"
+      },
+      "correct": "A",
+      "explanation": "An unweighted graph is a graph where all edges are treated equally, with no extra values like",
+      "id": 60
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A binary tree is a special type of tree data structure in which every node can have a",
+        "B": "A Undirected Graph in which edges do not have any direction. That is the nodes are",
+        "C": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+        "D": "Only uses memory for the nodes that exist, making it efficient for sparse trees."
+      },
+      "correct": "B",
+      "explanation": "A Undirected Graph in which edges do not have any direction. That is the nodes are",
+      "id": 61
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "You have to set a size in advance, which can lead to wasted space.",
+        "B": "A Directed Graph in which edge has direction. That is the nodes are ordered pairs in the",
+        "C": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+        "D": "A weighted graph is a graph where each edge has a number (weight) that represents distance,"
+      },
+      "correct": "B",
+      "explanation": "A Directed Graph in which edge has direction. That is the nodes are ordered pairs in the",
+      "id": 62
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A directed cyclic Graph is when you can follow a path along the directed edges that goes",
+        "B": "If the tree is not complete binary tree then then many slots in the array might be empty, this",
+        "C": "Easy to navigate parent and child nodes using index calculations, which is fast",
+        "D": "Easier to implement, especially for complete binary trees."
+      },
+      "correct": "A",
+      "explanation": "A directed cyclic Graph is when you can follow a path along the directed edges that goes",
+      "id": 63
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+        "B": "Easy to navigate parent and child nodes using index calculations, which is fast",
+        "C": "You have to set a size in advance, which can lead to wasted space.",
+        "D": "A Undirected Graph in which edges do not have any direction. That is the nodes are"
+      },
+      "correct": "A",
+      "explanation": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+      "id": 64
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A Undirected Graph in which edges do not have any direction. That is the nodes are",
+        "B": "All the leaf elements must lean towards the left.",
+        "C": "A Directed Graph in which edge has direction. That is the nodes are ordered pairs in the",
+        "D": "In a normal tree, every node can have any number of children."
+      },
+      "correct": "D",
+      "explanation": "In a normal tree, every node can have any number of children.",
+      "id": 65
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Easier to implement, especially for complete binary trees.",
+        "B": "You have to set a size in advance, which can lead to wasted space.",
+        "C": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+        "D": "A binary tree is a special type of tree data structure in which every node can have a"
+      },
+      "correct": "D",
+      "explanation": "A binary tree is a special type of tree data structure in which every node can have a",
+      "id": 66
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Every level except the last level must be completely filled.",
+        "B": "A binary tree is a special type of tree data structure in which every node can have a",
+        "C": "Only uses memory for the nodes that exist, making it efficient for sparse trees.",
+        "D": "All the leaf elements must lean towards the left."
+      },
+      "correct": "A",
+      "explanation": "Every level except the last level must be completely filled.",
+      "id": 67
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "All the leaf elements must lean towards the left.",
+        "B": "A directed cyclic Graph is when you can follow a path along the directed edges that goes",
+        "C": "Easier to implement, especially for complete binary trees.",
+        "D": "If the tree is not complete binary tree then then many slots in the array might be empty, this"
+      },
+      "correct": "A",
+      "explanation": "All the leaf elements must lean towards the left.",
+      "id": 68
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+        "B": "All the leaf elements must lean towards the left.",
+        "C": "Finding a node can take longer because you have to start from the root and follow pointers.",
+        "D": "Not as flexible as linked representations for dynamic trees."
+      },
+      "correct": "A",
+      "explanation": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+      "id": 69
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "You have to set a size in advance, which can lead to wasted space.",
+        "B": "Finding a node can take longer because you have to start from the root and follow pointers.",
+        "C": "Adding or removing nodes is straightforward and requires only pointer adjustments.",
+        "D": "A Undirected Graph in which edges do not have any direction. That is the nodes are"
+      },
+      "correct": "C",
+      "explanation": "Adding or removing nodes is straightforward and requires only pointer adjustments.",
+      "id": 70
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+        "B": "An unweighted graph is a graph where all edges are treated equally, with no extra values like",
+        "C": "A weighted graph is a graph where each edge has a number (weight) that represents distance,",
+        "D": "Only uses memory for the nodes that exist, making it efficient for sparse trees."
+      },
+      "correct": "D",
+      "explanation": "Only uses memory for the nodes that exist, making it efficient for sparse trees.",
+      "id": 71
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Only uses memory for the nodes that exist, making it efficient for sparse trees.",
+        "B": "Easy to navigate parent and child nodes using index calculations, which is fast",
+        "C": "Finding a node can take longer because you have to start from the root and follow pointers.",
+        "D": "In a normal tree, every node can have any number of children."
+      },
+      "correct": "C",
+      "explanation": "Finding a node can take longer because you have to start from the root and follow pointers.",
+      "id": 72
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+        "B": "Easier to implement, especially for complete binary trees.",
+        "C": "Easy to navigate parent and child nodes using index calculations, which is fast",
+        "D": "All the leaf elements must lean towards the left."
+      },
+      "correct": "C",
+      "explanation": "Easy to navigate parent and child nodes using index calculations, which is fast",
+      "id": 73
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Only uses memory for the nodes that exist, making it efficient for sparse trees.",
+        "B": "Easier to implement, especially for complete binary trees.",
+        "C": "A loop, also called a self-loop, is an edge that begins and ends on the same vertex. A loop",
+        "D": "If the tree is not complete binary tree then then many slots in the array might be empty, this"
+      },
+      "correct": "B",
+      "explanation": "Easier to implement, especially for complete binary trees.",
+      "id": 74
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "A Directed Graph in which edge has direction. That is the nodes are ordered pairs in the",
+        "B": "Every level except the last level must be completely filled.",
+        "C": "You have to set a size in advance, which can lead to wasted space.",
+        "D": "Adding or removing nodes is straightforward and requires only pointer adjustments."
+      },
+      "correct": "C",
+      "explanation": "You have to set a size in advance, which can lead to wasted space.",
+      "id": 75
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Finding a node can take longer because you have to start from the root and follow pointers.",
+        "B": "If the tree is not complete binary tree then then many slots in the array might be empty, this",
+        "C": "It can easily grow or shrink as needed, so it uses only the memory it needs.",
+        "D": "Every level except the last level must be completely filled."
+      },
+      "correct": "B",
+      "explanation": "If the tree is not complete binary tree then then many slots in the array might be empty, this",
+      "id": 76
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about graphs and representations? (Lec 7 DSA Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Not as flexible as linked representations for dynamic trees.",
+        "B": "You have to set a size in advance, which can lead to wasted space.",
+        "C": "All the leaf elements must lean towards the left.",
+        "D": "Easy to navigate parent and child nodes using index calculations, which is fast"
+      },
+      "correct": "A",
+      "explanation": "Not as flexible as linked representations for dynamic trees.",
+      "id": 77
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "At the End: Add or Remove the last element of the array.",
+        "B": "Simplicity: Easy to implement and understand, making it suitable for beginners.",
+        "C": "Unsorted Data: Linear Search doesn’t require the data to be sorted.",
+        "D": "Sorted Data: Binary Search requires the array to be sorted."
+      },
+      "correct": "C",
+      "explanation": "Unsorted Data: Linear Search doesn’t require the data to be sorted.",
+      "id": 78
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Sorted Data: Binary Search requires the array to be sorted.",
+        "B": "If the target is smaller, repeat the search on the left half.",
+        "C": "Small Data Sets: Efficient for small arrays where the overhead of more complex",
+        "D": "If the target is larger, repeat the search on the right half."
+      },
+      "correct": "C",
+      "explanation": "Small Data Sets: Efficient for small arrays where the overhead of more complex",
+      "id": 79
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Simplicity: Easy to implement and understand, making it suitable for beginners.",
+        "B": "Performance-Critical Applications: Ideal when performance is a priority, and the",
+        "C": "At the Beginning: Add or Remove the first element of the array.",
+        "D": "If the target is larger, repeat the search on the right half."
+      },
+      "correct": "A",
+      "explanation": "Simplicity: Easy to implement and understand, making it suitable for beginners.",
+      "id": 80
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "At the Beginning: Add or Remove the first element of the array.",
+        "B": "Sorted Data: Binary Search requires the array to be sorted.",
+        "C": "If the target is smaller, repeat the search on the left half.",
+        "D": "Small Data Sets: Efficient for small arrays where the overhead of more complex"
+      },
+      "correct": "B",
+      "explanation": "Sorted Data: Binary Search requires the array to be sorted.",
+      "id": 81
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "At a Specific Position: Add or Remove an element from a given index in the array.",
+        "B": "At the Beginning: Add or Remove the first element of the array.",
+        "C": "If the target is smaller, repeat the search on the left half.",
+        "D": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons"
+      },
+      "correct": "D",
+      "explanation": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons",
+      "id": 82
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Sorted Data: Binary Search requires the array to be sorted.",
+        "B": "Performance-Critical Applications: Ideal when performance is a priority, and the",
+        "C": "At the End: Add or Remove the last element of the array.",
+        "D": "If the target is smaller, repeat the search on the left half."
+      },
+      "correct": "B",
+      "explanation": "Performance-Critical Applications: Ideal when performance is a priority, and the",
+      "id": 83
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "If the target is smaller, repeat the search on the left half.",
+        "B": "Simplicity: Easy to implement and understand, making it suitable for beginners.",
+        "C": "Performance-Critical Applications: Ideal when performance is a priority, and the",
+        "D": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons"
+      },
+      "correct": "A",
+      "explanation": "If the target is smaller, repeat the search on the left half.",
+      "id": 84
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "If the target is larger, repeat the search on the right half.",
+        "B": "If the target is smaller, repeat the search on the left half.",
+        "C": "At the Beginning: Add or Remove the first element of the array.",
+        "D": "Unsorted Data: Linear Search doesn’t require the data to be sorted."
+      },
+      "correct": "A",
+      "explanation": "If the target is larger, repeat the search on the right half.",
+      "id": 85
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Performance-Critical Applications: Ideal when performance is a priority, and the",
+        "B": "Dynamic Management: Allows for the dynamic management of data by adding",
+        "C": "At a Specific Position: Add or Remove an element from a given index in the array.",
+        "D": "Small Data Sets: Efficient for small arrays where the overhead of more complex"
+      },
+      "correct": "B",
+      "explanation": "Dynamic Management: Allows for the dynamic management of data by adding",
+      "id": 86
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Small Data Sets: Efficient for small arrays where the overhead of more complex",
+        "B": "Optimization: Helps in optimizing the performance of applications by resize the",
+        "C": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons",
+        "D": "Performance-Critical Applications: Ideal when performance is a priority, and the"
+      },
+      "correct": "B",
+      "explanation": "Optimization: Helps in optimizing the performance of applications by resize the",
+      "id": 87
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons",
+        "B": "Optimization: Helps in optimizing the performance of applications by resize the",
+        "C": "Small Data Sets: Efficient for small arrays where the overhead of more complex",
+        "D": "At the Beginning: Add or Remove the first element of the array."
+      },
+      "correct": "D",
+      "explanation": "At the Beginning: Add or Remove the first element of the array.",
+      "id": 88
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "At the End: Add or Remove the last element of the array.",
+        "B": "Dynamic Management: Allows for the dynamic management of data by adding",
+        "C": "Large Data Sets: Highly efficient for large arrays, reducing the number of comparisons",
+        "D": "Unsorted Data: Linear Search doesn’t require the data to be sorted."
+      },
+      "correct": "A",
+      "explanation": "At the End: Add or Remove the last element of the array.",
+      "id": 89
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about array operations, search, and complexity? (Lec 3 DSA Operations in array .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "If the target is smaller, repeat the search on the left half.",
+        "B": "Sorted Data: Binary Search requires the array to be sorted.",
+        "C": "At a Specific Position: Add or Remove an element from a given index in the array.",
+        "D": "At the End: Add or Remove the last element of the array."
+      },
+      "correct": "C",
+      "explanation": "At a Specific Position: Add or Remove an element from a given index in the array.",
+      "id": 90
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "The merge function of merge sort to efficiently solve the problems like union and",
+        "B": "Time complexity — how the running time grows with the size of the input.",
+        "C": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly",
+        "D": "O(n) represents the time taken to merge the two sorted halves"
+      },
+      "correct": "B",
+      "explanation": "Time complexity — how the running time grows with the size of the input.",
+      "id": 91
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Merge Sort and its variations are used in library methods of programming languages. Its",
+        "B": "External sorting (when the dataset is too large to fit in memory)",
+        "C": "Memory usage — do we sort in place, or do we need extra space?",
+        "D": "Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative"
+      },
+      "correct": "C",
+      "explanation": "Memory usage — do we sort in place, or do we need extra space?",
+      "id": 92
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "T(n) Represents the total time time taken by the algorithm to sort an array of size n.",
+        "B": "Recursive vs. iterative — some algorithms are most naturally expressed with recursion",
+        "C": "The merge function of merge sort to efficiently solve the problems like union and",
+        "D": "[38, 27, 43, 10] is divided into [38, 27] and [43, 10] ."
+      },
+      "correct": "B",
+      "explanation": "Recursive vs. iterative — some algorithms are most naturally expressed with recursion",
+      "id": 93
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,",
+        "B": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity",
+        "C": "O(n) represents the time taken to merge the two sorted halves",
+        "D": "Time complexity — how the running time grows with the size of the input."
+      },
+      "correct": "A",
+      "explanation": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,",
+      "id": 94
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "B": "The merge function of merge sort to efficiently solve the problems like union and",
+        "C": "Average Case: O(n log n), When the array is randomly ordered.",
+        "D": "[38, 27, 43, 10] is divided into [38, 27] and [43, 10] ."
+      },
+      "correct": "D",
+      "explanation": "[38, 27, 43, 10] is divided into [38, 27] and [43, 10] .",
+      "id": 95
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Merge [27, 38] and [10,43] to get the final sorted list [10, 27, 38, 43]",
+        "B": "T(n) Represents the total time time taken by the algorithm to sort an array of size n.",
+        "C": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,",
+        "D": "External sorting (when the dataset is too large to fit in memory)"
+      },
+      "correct": "A",
+      "explanation": "Merge [27, 38] and [10,43] to get the final sorted list [10, 27, 38, 43]",
+      "id": 96
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Average Case: O(n log n), When the array is randomly ordered.",
+        "B": "Time complexity — how the running time grows with the size of the input.",
+        "C": "T(n) Represents the total time time taken by the algorithm to sort an array of size n.",
+        "D": "Worst Case: O(n log n), When the array is sorted in reverse order."
+      },
+      "correct": "C",
+      "explanation": "T(n) Represents the total time time taken by the algorithm to sort an array of size n.",
+      "id": 97
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+        "B": "[38, 27, 43, 10] is divided into [38, 27] and [43, 10] .",
+        "C": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the",
+        "D": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity"
+      },
+      "correct": "C",
+      "explanation": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the",
+      "id": 98
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "B": "Memory usage — do we sort in place, or do we need extra space?",
+        "C": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+        "D": "O(n) represents the time taken to merge the two sorted halves"
+      },
+      "correct": "D",
+      "explanation": "O(n) represents the time taken to merge the two sorted halves",
+      "id": 99
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Best Case: O(n log n), When the array is already sorted or nearly sorted.",
+        "B": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,",
+        "C": "Used to solve problems like Inversion counting, Count Smaller on Right & Surpasser Count",
+        "D": "Merge [27, 38] and [10,43] to get the final sorted list [10, 27, 38, 43]"
+      },
+      "correct": "A",
+      "explanation": "Best Case: O(n log n), When the array is already sorted or nearly sorted.",
+      "id": 100
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Average Case: O(n log n), When the array is randomly ordered.",
+        "B": "Memory usage — do we sort in place, or do we need extra space?",
+        "C": "Merge [27, 38] and [10,43] to get the final sorted list [10, 27, 38, 43]",
+        "D": "Time complexity — how the running time grows with the size of the input."
+      },
+      "correct": "A",
+      "explanation": "Average Case: O(n log n), When the array is randomly ordered.",
+      "id": 101
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Worst Case: O(n log n), When the array is sorted in reverse order.",
+        "B": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the",
+        "C": "Merge Sort and its variations are used in library methods of programming languages. Its",
+        "D": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,"
+      },
+      "correct": "A",
+      "explanation": "Worst Case: O(n log n), When the array is sorted in reverse order.",
+      "id": 102
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Used to solve problems like Inversion counting, Count Smaller on Right & Surpasser Count",
+        "B": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity",
+        "C": "External sorting (when the dataset is too large to fit in memory)",
+        "D": "It can be easily parallelized as we can independently sort subarrays and then merge."
+      },
+      "correct": "C",
+      "explanation": "External sorting (when the dataset is too large to fit in memory)",
+      "id": 103
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Used to solve problems like Inversion counting, Count Smaller on Right & Surpasser Count",
+        "B": "The merge function of merge sort to efficiently solve the problems like union and",
+        "C": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+        "D": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays"
+      },
+      "correct": "A",
+      "explanation": "Used to solve problems like Inversion counting, Count Smaller on Right & Surpasser Count",
+      "id": 104
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Merge Sort and its variations are used in library methods of programming languages. Its",
+        "B": "Comparison-based vs. not — most algorithms compare elements directly (bubble sort,",
+        "C": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+        "D": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly"
+      },
+      "correct": "A",
+      "explanation": "Merge Sort and its variations are used in library methods of programming languages. Its",
+      "id": 105
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "It is a preferred algorithm for sorting Linked lists.",
+        "B": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+        "C": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "D": "Worst Case: O(n log n), When the array is sorted in reverse order."
+      },
+      "correct": "A",
+      "explanation": "It is a preferred algorithm for sorting Linked lists.",
+      "id": 106
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity",
+        "B": "Merge [27, 38] and [10,43] to get the final sorted list [10, 27, 38, 43]",
+        "C": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the",
+        "D": "It can be easily parallelized as we can independently sort subarrays and then merge."
+      },
+      "correct": "D",
+      "explanation": "It can be easily parallelized as we can independently sort subarrays and then merge.",
+      "id": 107
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "[38, 27, 43, 10] is divided into [38, 27] and [43, 10] .",
+        "B": "The merge function of merge sort to efficiently solve the problems like union and",
+        "C": "Time complexity — how the running time grows with the size of the input.",
+        "D": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly"
+      },
+      "correct": "B",
+      "explanation": "The merge function of merge sort to efficiently solve the problems like union and",
+      "id": 108
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "O(n) represents the time taken to merge the two sorted halves",
+        "B": "Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative",
+        "C": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the",
+        "D": "Memory usage — do we sort in place, or do we need extra space?"
+      },
+      "correct": "B",
+      "explanation": "Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative",
+      "id": 109
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity",
+        "B": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays",
+        "C": "It is a preferred algorithm for sorting Linked lists.",
+        "D": "2T(n/2) represents time taken by the algorithm to recursively sort the two halves of the"
+      },
+      "correct": "A",
+      "explanation": "Guaranteed worst-case performance: Merge sort has a worst-case time complexity",
+      "id": 110
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays",
+        "B": "Naturally Parallel : We independently merge subarrays that makes it suitable for parallel",
+        "C": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "D": "Simple to implement: The divide-and-conquer approach is straightforward."
+      },
+      "correct": "D",
+      "explanation": "Simple to implement: The divide-and-conquer approach is straightforward.",
+      "id": 111
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Simple to implement: The divide-and-conquer approach is straightforward.",
+        "B": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays",
+        "C": "Naturally Parallel : We independently merge subarrays that makes it suitable for parallel",
+        "D": "Merge Sort and its variations are used in library methods of programming languages. Its"
+      },
+      "correct": "C",
+      "explanation": "Naturally Parallel : We independently merge subarrays that makes it suitable for parallel",
+      "id": 112
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays",
+        "B": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "C": "Memory usage — do we sort in place, or do we need extra space?",
+        "D": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly"
+      },
+      "correct": "A",
+      "explanation": "Space complexity: Merge sort requires additional memory to store the merged sub-arrays",
+      "id": 113
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "B": "Simple to implement: The divide-and-conquer approach is straightforward.",
+        "C": "T(n) Represents the total time time taken by the algorithm to sort an array of size n.",
+        "D": "Time complexity — how the running time grows with the size of the input."
+      },
+      "correct": "A",
+      "explanation": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+      "id": 114
+    },
+    {
+      "question": {
+        "en": "Which statement appears in the slides about sorting algorithms and complexity? (Lec 9 sort .txt)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires",
+        "B": "Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative",
+        "C": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly",
+        "D": "Simple to implement: The divide-and-conquer approach is straightforward."
+      },
+      "correct": "C",
+      "explanation": "Merge Sort is Slower than QuickSort in general as QuickSort is more cache friendly",
+      "id": 115
+    },
+    {
+      "question": {
+        "en": "In a binary search tree, values in the left sub-tree of a node with value v are: (Lec 8 DSA BST)",
+        "ar": ""
+      },
+      "options": {
+        "A": "all greater than v",
+        "B": "all less than v",
+        "C": "unordered relative to v",
+        "D": "always equal to v"
+      },
+      "correct": "B",
+      "explanation": "BST property: every value in the left sub-tree is < v.",
+      "id": 116
+    },
+    {
+      "question": {
+        "en": "To find the minimum in a BST you typically walk: (Lec 8 DSA BST)",
+        "ar": ""
+      },
+      "options": {
+        "A": "repeatedly to the right child",
+        "B": "repeatedly to the left child",
+        "C": "level-order from the root",
+        "D": "only the root"
+      },
+      "correct": "B",
+      "explanation": "Smallest value is at the leftmost node.",
+      "id": 117
+    },
+    {
+      "question": {
+        "en": "Merge sort primarily follows which approach? (Lec 9 sort)",
+        "ar": ""
+      },
+      "options": {
+        "A": "Greedy",
+        "B": "Divide and Conquer",
+        "C": "Brute force only",
+        "D": "Dynamic programming only"
+      },
+      "correct": "B",
+      "explanation": "Merge sort divides the array, sorts halves, then merges.",
+      "id": 118
+    },
+    {
+      "question": {
+        "en": "Bubble sort compares which pairs in each inner step? (Lec 9 sort)",
+        "ar": ""
+      },
+      "options": {
+        "A": "elements far apart (gap > 1)",
+        "B": "adjacent pairs",
+        "C": "only first and last",
+        "D": "random pairs"
+      },
+      "correct": "B",
+      "explanation": "It walks through the list comparing adjacent elements and swapping if out of order.",
+      "id": 119
+    },
+    {
+      "question": {
+        "en": "Worst-case time complexity of bubble sort is typically: (Lec 9 sort)",
+        "ar": ""
+      },
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(1)"
+      },
+      "correct": "C",
+      "explanation": "Nested loops over the list yield quadratic time in the worst case.",
+      "id": 120
+    },
+    {
+      "question": {
+        "en": "An undirected graph's adjacency matrix for a simple graph is often: (Lec 7 Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "asymmetric",
+        "B": "symmetric",
+        "C": "always diagonal only",
+        "D": "always zero"
+      },
+      "correct": "B",
+      "explanation": "Edges go both ways, so entries (i,j) and (j,i) match.",
+      "id": 121
+    },
+    {
+      "question": {
+        "en": "In adjacency list representation, each array entry typically stores: (Lec 7 Graph & Tree)",
+        "ar": ""
+      },
+      "options": {
+        "A": "only vertex names",
+        "B": "neighbors of that vertex (often as a list)",
+        "C": "the full matrix row",
+        "D": "edge weights only, never vertices"
+      },
+      "correct": "B",
+      "explanation": "array[i] lists vertices adjacent to vertex i.",
+      "id": 122
+    }
+  ]
+}

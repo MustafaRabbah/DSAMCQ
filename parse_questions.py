@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Parse MCQ bank file into questions.json for the web app."""
+"""Parse MCQ bank file `1` into questions_manual.json (then run merge_questions.py)."""
 import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "1"
-OUT = ROOT / "questions.json"
+OUT = ROOT / "questions_manual.json"
 
 # Source file sometimes glues "Lec 6" + "2." into "62. Question:" — match any N. Question:
 BLOCK = re.compile(

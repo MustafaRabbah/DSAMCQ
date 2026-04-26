@@ -1,10 +1,12 @@
 const LETTERS = ["A", "B", "C", "D"];
+const SITE_NAME = "هياكل البيانات والخوارزميات";
 
 const els = {
   bankTitle: document.getElementById("bankTitle"),
   cardLoading: document.getElementById("cardLoading"),
   cardBody: document.getElementById("cardBody"),
   cardError: document.getElementById("cardError"),
+  quizCard: document.getElementById("quizCard"),
   qEn: document.getElementById("qEn"),
   qAr: document.getElementById("qAr"),
   optionsGrid: document.getElementById("optionsGrid"),
@@ -21,6 +23,22 @@ const els = {
   progressFill: document.getElementById("progressFill"),
   progressBar: document.querySelector(".progress-bar"),
   searchInput: document.getElementById("searchInput"),
+  tabPractice: document.getElementById("tabPractice"),
+  tabExam: document.getElementById("tabExam"),
+  practiceTools: document.getElementById("practiceTools"),
+  examSetup: document.getElementById("examSetup"),
+  examSlider: document.getElementById("examSizeSlider"),
+  examSizeValue: document.getElementById("examSizeValue"),
+  examBankHint: document.getElementById("examBankHint"),
+  btnStartExam: document.getElementById("btnStartExam"),
+  examBadge: document.getElementById("examBadge"),
+  summaryModal: document.getElementById("summaryModal"),
+  summaryBackdrop: document.getElementById("summaryBackdrop"),
+  summaryRing: document.getElementById("summaryRing"),
+  summaryPercent: document.getElementById("summaryPercent"),
+  summaryStats: document.getElementById("summaryStats"),
+  summaryNewExam: document.getElementById("summaryNewExam"),
+  summaryToPractice: document.getElementById("summaryToPractice"),
 };
 
 let data = null;
@@ -30,7 +48,22 @@ let pos = 0;
 let selected = null;
 let revealed = false;
 let correctCount = 0;
-let attempted = new Set();
+/** @type {Map<number, { choice: string, ok: boolean }>} */
+let attempted = new Map();
+
+/** @type {'practice' | 'exam'} */
+let activeTab = "practice";
+/** True بينما الاختبار قيد التنفيذ */
+let examSession = false;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 function loadTheme() {
   const t = localStorage.getItem("mcq-theme");
@@ -56,24 +89,95 @@ function toggleTheme() {
   }
 }
 
-function shuffleOrder() {
-  order = order.map((_, i) => i);
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
+function updateExamBankHint() {
+  if (!data) return;
+  const n = data.questions.length;
+  const maxPick = Math.max(20, Math.min(100, n));
+  els.examSlider.max = String(maxPick);
+  let v = Number(els.examSlider.value);
+  if (v > maxPick) v = maxPick;
+  if (v < 20) v = 20;
+  els.examSlider.value = String(v);
+  els.examSizeValue.textContent = String(v);
+  els.examBankHint.textContent =
+    n >= 100
+      ? `البنك المدمَج يحتوي على ${n} سؤالاً. الحد الأعلى لعدد أسئلة الجولة هو 100.`
+      : `البنك المدمَج يحتوي على ${n} سؤالاً. يمكنك اختيار حتى ${maxPick} سؤالاً في هذه الجولة.`;
+}
+
+function setActiveTab(tab) {
+  activeTab = tab;
+  const isPractice = tab === "practice";
+
+  els.tabPractice.classList.toggle("is-active", isPractice);
+  els.tabPractice.setAttribute("aria-selected", isPractice ? "true" : "false");
+  els.tabExam.classList.toggle("is-active", !isPractice);
+  els.tabExam.setAttribute("aria-selected", !isPractice ? "true" : "false");
+
+  if (isPractice) {
+    examSession = false;
+    els.practiceTools.classList.remove("hidden");
+    els.examSetup.classList.add("hidden");
+    els.quizCard.classList.remove("hidden");
+    els.examBadge.classList.add("hidden");
+    applySearch();
+    return;
   }
+
+  els.practiceTools.classList.add("hidden");
+  if (!examSession) {
+    els.examSetup.classList.remove("hidden");
+    els.quizCard.classList.add("hidden");
+    els.examBadge.classList.add("hidden");
+  } else {
+    els.examSetup.classList.add("hidden");
+    els.quizCard.classList.remove("hidden");
+    els.examBadge.classList.remove("hidden");
+  }
+}
+
+function startExam() {
+  if (!data) return;
+  const total = data.questions.length;
+  if (total < 20) {
+    window.alert("البنك يحتوي على أقل من 20 سؤالاً — لا يمكن تشغيل الاختبار بهذا الحد.");
+    return;
+  }
+  const cap = Math.min(100, total);
+  const want = Math.min(cap, Math.max(20, Number(els.examSlider.value) || 50));
+  const take = want;
+  const allIdx = data.questions.map((_, i) => i);
+  order = shuffle(allIdx).slice(0, take);
+  examSession = true;
   pos = 0;
   selected = null;
   revealed = false;
   correctCount = 0;
-  attempted = new Set();
+  attempted = new Map();
+
+  els.examSetup.classList.add("hidden");
+  els.quizCard.classList.remove("hidden");
+  els.examBadge.classList.remove("hidden");
+  els.examBadge.textContent = `اختبار: ${take} سؤالاً`;
+  els.scoreLabel.hidden = false;
+  render();
+}
+
+function shufflePracticeOrder() {
+  if (!data || examSession) return;
+  order = shuffle(order.length ? order : data.questions.map((_, i) => i));
+  pos = 0;
+  selected = null;
+  revealed = false;
+  correctCount = 0;
+  attempted = new Map();
   els.scoreLabel.hidden = false;
   render();
 }
 
 function applySearch() {
+  if (!data || examSession) return;
   const q = els.searchInput.value.trim().toLowerCase();
-  if (!data) return;
   if (!q) {
     order = data.questions.map((_, i) => i);
   } else {
@@ -92,6 +196,33 @@ function applySearch() {
 function currentQuestion() {
   const idx = order[pos];
   return data.questions[idx];
+}
+
+function openExamSummary() {
+  const total = order.length;
+  let answered = 0;
+  let wrong = 0;
+  for (const idx of order) {
+    const a = attempted.get(idx);
+    if (a) {
+      answered++;
+      if (!a.ok) wrong++;
+    }
+  }
+  const pct = total ? Math.round((correctCount / total) * 100) : 0;
+  els.summaryRing.style.setProperty("--p", pct);
+  els.summaryPercent.textContent = `${pct}%`;
+  els.summaryStats.innerHTML = `
+    <li><span>إجمالي الأسئلة</span><strong>${total}</strong></li>
+    <li><span>إجابات صحيحة</span><strong>${correctCount}</strong></li>
+    <li><span>إجابات خاطئة</span><strong>${wrong}</strong></li>
+    <li><span>لم تُجب بعد</span><strong>${total - answered}</strong></li>
+  `;
+  els.summaryModal.classList.remove("hidden");
+}
+
+function closeSummary() {
+  els.summaryModal.classList.add("hidden");
 }
 
 function render() {
@@ -113,16 +244,21 @@ function render() {
 
   els.progressLabel.textContent = `السؤال ${displayNum} من ${n}`;
   els.scoreLabel.textContent = `صحيح: ${correctCount}`;
+  els.scoreLabel.hidden = examSession ? false : correctCount === 0 && attempted.size === 0;
   const pct = (displayNum / n) * 100;
   els.progressFill.style.width = `${pct}%`;
   els.progressBar.setAttribute("aria-valuemax", String(n));
   els.progressBar.setAttribute("aria-valuenow", String(displayNum));
 
   els.qEn.textContent = item.question.en;
-  els.qAr.textContent = item.question.ar;
+  els.qAr.textContent = item.question.ar ?? "";
+  const arBlock = els.qAr.closest(".question-block");
+  if (arBlock) {
+    arBlock.classList.toggle("hidden", !String(item.question.ar ?? "").trim());
+  }
 
   els.optionsGrid.innerHTML = "";
-  LETTERS.forEach((L, i) => {
+  LETTERS.forEach((L) => {
     const text = item.options[L] ?? "";
     const btn = document.createElement("button");
     btn.type = "button";
@@ -151,7 +287,15 @@ function render() {
   }
 
   els.btnPrev.disabled = pos === 0;
-  els.btnNext.disabled = pos >= n - 1;
+
+  const last = pos >= n - 1;
+  if (examSession) {
+    els.btnNext.disabled = !revealed;
+    els.btnNext.textContent = last && revealed ? "عرض النتيجة" : "التالي";
+  } else {
+    els.btnNext.disabled = last;
+    els.btnNext.textContent = "التالي";
+  }
 }
 
 function choose(letter) {
@@ -167,6 +311,15 @@ function choose(letter) {
   showFeedback(letter);
   els.scoreLabel.hidden = false;
   els.scoreLabel.textContent = `صحيح: ${correctCount}`;
+
+  const n = order.length;
+  const last = pos >= n - 1;
+  if (examSession) {
+    els.btnNext.disabled = false;
+    els.btnNext.textContent = last ? "عرض النتيجة" : "التالي";
+  } else {
+    els.btnNext.disabled = last;
+  }
 }
 
 function showFeedback(letter) {
@@ -194,25 +347,54 @@ function showFeedback(letter) {
 function go(delta) {
   const n = order.length;
   if (n === 0) return;
+  if (examSession && delta > 0 && !revealed) return;
   const next = pos + delta;
   if (next < 0 || next >= n) return;
   pos = next;
   render();
 }
 
+function onNextClick() {
+  if (examSession && pos === order.length - 1 && revealed) {
+    openExamSummary();
+    return;
+  }
+  go(1);
+}
+
 async function init() {
   loadTheme();
   els.btnTheme.addEventListener("click", toggleTheme);
-  els.btnShuffle.addEventListener("click", shuffleOrder);
+  els.tabPractice.addEventListener("click", () => setActiveTab("practice"));
+  els.tabExam.addEventListener("click", () => setActiveTab("exam"));
+  els.btnStartExam.addEventListener("click", startExam);
+  els.btnShuffle.addEventListener("click", shufflePracticeOrder);
   els.btnPrev.addEventListener("click", () => go(-1));
-  els.btnNext.addEventListener("click", () => go(1));
-  els.searchInput.addEventListener(
-    "input",
-    debounce(() => applySearch(), 200)
-  );
+  els.btnNext.addEventListener("click", onNextClick);
+  els.searchInput.addEventListener("input", debounce(() => applySearch(), 200));
+
+  els.examSlider.addEventListener("input", () => {
+    els.examSizeValue.textContent = els.examSlider.value;
+  });
+
+  els.summaryBackdrop.addEventListener("click", closeSummary);
+  els.summaryNewExam.addEventListener("click", () => {
+    closeSummary();
+    examSession = false;
+    els.examBadge.classList.add("hidden");
+    setActiveTab("exam");
+  });
+  els.summaryToPractice.addEventListener("click", () => {
+    closeSummary();
+    setActiveTab("practice");
+  });
 
   document.addEventListener("keydown", (e) => {
     if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+    if (!els.summaryModal.classList.contains("hidden")) {
+      if (e.key === "Escape") closeSummary();
+      return;
+    }
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
       e.preventDefault();
       go(e.key === "ArrowRight" ? 1 : -1);
@@ -227,11 +409,14 @@ async function init() {
     const res = await fetch("questions.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
-    els.bankTitle.textContent = data.title || "بنك الأسئلة";
-    document.title = `${els.bankTitle.textContent} — MCQ`;
+    els.bankTitle.textContent = SITE_NAME;
+    document.title = `${SITE_NAME} — MCQ`;
     order = data.questions.map((_, i) => i);
+    updateExamBankHint();
+    els.examSizeValue.textContent = els.examSlider.value;
     els.cardLoading.classList.add("hidden");
     els.cardBody.classList.remove("hidden");
+    setActiveTab("practice");
     render();
   } catch (err) {
     els.cardLoading.classList.add("hidden");

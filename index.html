@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="بنك أسئلة MCQ — مراجعة تفاعلية لهياكل البيانات والخوارزميات مع الترجمة والشرح."
+      content="هياكل البيانات والخوارزميات — بنك أسئلة تفاعلي للمراجعة والاختبار."
     />
-    <title>بنك الأسئلة — MCQ</title>
+    <title>هياكل البيانات والخوارزميات — MCQ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+    <div class="bg-mesh" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="header-inner">
         <div class="brand">
-          <span class="brand-mark" aria-hidden="true">◈</span>
+          <div class="brand-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="28" height="28" rx="8" class="brand-svg-fill" />
+              <path d="M12 14h12M12 18h8M12 22h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="brand-svg-lines" />
+            </svg>
+          </div>
           <div>
-            <h1 class="site-title" id="bankTitle">بنك الأسئلة</h1>
-            <p class="site-tagline">مراجعة تفاعلية — سؤال بالإنجليزية والعربية مع الشرح</p>
+            <h1 class="site-title" id="bankTitle">هياكل البيانات والخوارزميات</h1>
+            <p class="site-tagline">مراجعة حرة أو اختبار موجّه — مع الشرح بعد كل سؤال</p>
           </div>
         </div>
         <div class="header-actions">
-          <button type="button" class="btn btn-ghost" id="btnShuffle" title="خلط ترتيب الأسئلة">
-            خلط الأسئلة
-          </button>
-          <button type="button" class="btn btn-ghost" id="btnTheme" aria-label="تبديل الوضع الليلي">
+          <span class="exam-badge hidden" id="examBadge" aria-live="polite"></span>
+          <button type="button" class="btn btn-ghost btn-icon" id="btnTheme" aria-label="تبديل الوضع الليلي">
             <span class="theme-icon" aria-hidden="true">☾</span>
           </button>
         </div>
@@ -39,33 +45,66 @@
     </header>
 
     <main id="main" class="main">
-      <div class="toolbar">
-        <div class="progress-wrap">
-          <div class="progress-meta">
-            <span id="progressLabel">السؤال 1 من 150</span>
-            <span class="score" id="scoreLabel" hidden>صحيح: 0</span>
-          </div>
-          <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="150" aria-valuenow="1">
-            <div class="progress-fill" id="progressFill"></div>
+      <section class="panel mode-panel" aria-label="اختيار الوضع">
+        <div class="segmented" role="tablist">
+          <button type="button" class="segmented-btn is-active" id="tabPractice" role="tab" aria-selected="true">
+            مراجعة
+          </button>
+          <button type="button" class="segmented-btn" id="tabExam" role="tab" aria-selected="false">اختبار</button>
+        </div>
+
+        <div id="practiceTools" class="practice-tools">
+          <div class="toolbar-inner">
+            <div class="progress-wrap">
+              <div class="progress-meta">
+                <span id="progressLabel">السؤال 1 من —</span>
+                <span class="score" id="scoreLabel" hidden>صحيح: 0</span>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+            <label class="search-wrap">
+              <span class="visually-hidden">بحث في نص السؤال</span>
+              <input
+                type="search"
+                id="searchInput"
+                class="search-input"
+                placeholder="بحث في السؤال…"
+                autocomplete="off"
+              />
+            </label>
+            <button type="button" class="btn btn-secondary btn-compact" id="btnShuffle" title="خلط ترتيب الأسئلة">
+              خلط
+            </button>
           </div>
         </div>
-        <label class="search-wrap">
-          <span class="visually-hidden">بحث في نص السؤال</span>
-          <input
-            type="search"
-            id="searchInput"
-            class="search-input"
-            placeholder="بحث في السؤال (إنجليزي أو عربي)…"
-            autocomplete="off"
-          />
-        </label>
-      </div>
 
-      <article class="card" id="quizCard" aria-live="polite">
+        <div id="examSetup" class="exam-setup hidden">
+          <div class="exam-setup-card">
+            <h2 class="exam-setup-title">ابنِ اختبارك</h2>
+            <p class="exam-setup-desc">يُختار عشوائياً من بنك الأسئلة المدمَج (المراجعة + محاضرات PDF).</p>
+            <div class="slider-block">
+              <div class="slider-head">
+                <label for="examSizeSlider">عدد الأسئلة</label>
+                <output id="examSizeValue" for="examSizeSlider">50</output>
+              </div>
+              <input type="range" id="examSizeSlider" min="20" max="100" value="50" step="1" />
+              <div class="slider-ticks"><span>20</span><span>100</span></div>
+            </div>
+            <p class="exam-bank-hint" id="examBankHint"></p>
+            <div class="exam-actions">
+              <button type="button" class="btn btn-primary btn-glow" id="btnStartExam">ابدأ الاختبار</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="card quiz-card" id="quizCard" aria-live="polite">
         <div class="card-loading" id="cardLoading">جاري تحميل الأسئلة…</div>
         <div class="card-body hidden" id="cardBody">
           <div class="question-block ltr" lang="en">
-            <span class="label">Question</span>
+            <span class="label label-en">Question</span>
             <p class="question-text" id="qEn"></p>
           </div>
           <div class="question-block" lang="ar">
@@ -74,7 +113,7 @@
           </div>
 
           <section class="options-section" aria-label="الخيارات">
-            <span class="label">الخيارات</span>
+            <span class="label">اختر الإجابة</span>
             <div class="options-grid" id="optionsGrid" role="radiogroup"></div>
           </section>
 
@@ -94,19 +133,32 @@
             <button type="button" class="btn btn-secondary" id="btnPrev">السابق</button>
             <button type="button" class="btn btn-primary" id="btnNext">التالي</button>
           </nav>
-          <p class="hint">اختصارات: <kbd>←</kbd> <kbd>→</kbd> للتنقل، <kbd>1</kbd>–<kbd>4</kbd> لاختيار خيار.</p>
+          <p class="hint">اختصارات: <kbd>←</kbd> <kbd>→</kbd> للتنقل، <kbd>1</kbd>–<kbd>4</kbd> للخيارات.</p>
         </div>
         <div class="card-error hidden" id="cardError"></div>
       </article>
     </main>
 
     <footer class="site-footer">
-      <p>
-        لرفع الموقع على GitHub: أنشئ مستودعاً وادفع الملفات، ثم من
-        <strong>Settings → Pages</strong>
-        فعّل المصدر على الفرع <code>main</code> والمجلد الجذر.
-      </p>
+      <p class="footer-author">Mustafa Rabbah</p>
     </footer>
+
+    <div class="summary-modal hidden" id="summaryModal" role="dialog" aria-modal="true" aria-labelledby="summaryTitle">
+      <div class="summary-backdrop" id="summaryBackdrop"></div>
+      <div class="summary-dialog">
+        <h2 id="summaryTitle" class="summary-title">نتيجة الاختبار</h2>
+        <div class="summary-ring-wrap">
+          <div class="summary-ring" id="summaryRing" style="--p: 0">
+            <span class="summary-ring-value" id="summaryPercent">0%</span>
+          </div>
+        </div>
+        <ul class="summary-stats" id="summaryStats"></ul>
+        <div class="summary-actions">
+          <button type="button" class="btn btn-primary" id="summaryNewExam">اختبار جديد</button>
+          <button type="button" class="btn btn-secondary" id="summaryToPractice">العودة للمراجعة</button>
+        </div>
+      </div>
+    </div>
 
     <script src="app.js" type="module"></script>
   </body>
