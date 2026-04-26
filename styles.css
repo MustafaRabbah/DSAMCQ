@@ -52,6 +52,94 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes optionEntrance {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulseOk {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseBad {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes shakeWrong {
+  0%,
+  100% {
+    margin-inline-start: 0;
+  }
+  20%,
+  60% {
+    margin-inline-start: -6px;
+  }
+  40%,
+  80% {
+    margin-inline-start: 6px;
+  }
+}
+
+@keyframes btnPop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .card-body.animate-in,
+  .card-body.animate-in .option-btn,
+  .feedback-banner.pulse-ok,
+  .feedback-banner.pulse-bad,
+  .option-btn.shake-wrong,
+  .btn.is-pressed {
+    animation: none !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-ar);
@@ -427,6 +515,23 @@ input[type="range"]::-moz-range-thumb {
   padding: 1.5rem 1.5rem 1.35rem;
 }
 
+.card-body.animate-in {
+  animation: cardEntrance 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-body.animate-in .option-btn:nth-child(1) {
+  animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.04s backwards;
+}
+.card-body.animate-in .option-btn:nth-child(2) {
+  animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.09s backwards;
+}
+.card-body.animate-in .option-btn:nth-child(3) {
+  animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.14s backwards;
+}
+.card-body.animate-in .option-btn:nth-child(4) {
+  animation: optionEntrance 0.38s cubic-bezier(0.22, 1, 0.36, 1) 0.19s backwards;
+}
+
 .hidden {
   display: none !important;
 }
@@ -501,6 +606,11 @@ input[type="range"]::-moz-range-thumb {
   transform: translateY(-1px);
 }
 
+.option-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .option-key {
   flex-shrink: 0;
   width: 2rem;
@@ -560,6 +670,18 @@ input[type="range"]::-moz-range-thumb {
   color: var(--danger);
 }
 
+.feedback-banner.pulse-ok {
+  animation: pulseOk 0.55s ease;
+}
+
+.feedback-banner.pulse-bad {
+  animation: pulseBad 0.45s ease;
+}
+
+.option-btn.shake-wrong {
+  animation: shakeWrong 0.45s ease;
+}
+
 .answer-row strong {
   font-size: 1.02rem;
   color: var(--accent);
@@ -609,6 +731,10 @@ kbd {
 
 .btn:active:not(:disabled) {
   transform: scale(0.98);
+}
+
+.btn.is-pressed {
+  animation: btnPop 0.35s ease;
 }
 
 .btn-primary {

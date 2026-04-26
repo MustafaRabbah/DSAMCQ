@@ -296,6 +296,12 @@ function render() {
     els.btnNext.disabled = last;
     els.btnNext.textContent = "التالي";
   }
+
+  if (order.length > 0) {
+    els.cardBody.classList.remove("animate-in");
+    void els.cardBody.offsetWidth;
+    els.cardBody.classList.add("animate-in");
+  }
 }
 
 function choose(letter) {
@@ -328,7 +334,9 @@ function showFeedback(letter) {
 
   els.feedback.classList.remove("hidden");
   els.feedbackBanner.textContent = ok ? "إجابة صحيحة — أحسنت" : "إجابة غير صحيحة — راجع الشرح";
-  els.feedbackBanner.classList.add(ok ? "ok" : "bad");
+  els.feedbackBanner.classList.remove("ok", "bad", "pulse-ok", "pulse-bad");
+  void els.feedbackBanner.offsetWidth;
+  els.feedbackBanner.classList.add(ok ? "ok" : "bad", ok ? "pulse-ok" : "pulse-bad");
 
   const correctText = item.options[item.correct] ?? "";
   els.correctOption.textContent = `${item.correct}) ${correctText}`;
@@ -337,8 +345,13 @@ function showFeedback(letter) {
   els.optionsGrid.querySelectorAll(".option-btn").forEach((btn) => {
     const L = btn.dataset.letter;
     btn.disabled = true;
+    btn.classList.remove("shake-wrong");
     if (L === item.correct) btn.classList.add("correct");
-    if (L === letter && L !== item.correct) btn.classList.add("wrong");
+    if (L === letter && L !== item.correct) {
+      btn.classList.add("wrong");
+      void btn.offsetWidth;
+      btn.classList.add("shake-wrong");
+    }
     if (L === letter) btn.classList.add("selected");
     btn.setAttribute("aria-checked", L === letter ? "true" : "false");
   });
@@ -368,7 +381,12 @@ async function init() {
   els.tabPractice.addEventListener("click", () => setActiveTab("practice"));
   els.tabExam.addEventListener("click", () => setActiveTab("exam"));
   els.btnStartExam.addEventListener("click", startExam);
-  els.btnShuffle.addEventListener("click", shufflePracticeOrder);
+  els.btnShuffle.addEventListener("click", () => {
+    els.btnShuffle.classList.remove("is-pressed");
+    void els.btnShuffle.offsetWidth;
+    els.btnShuffle.classList.add("is-pressed");
+    shufflePracticeOrder();
+  });
   els.btnPrev.addEventListener("click", () => go(-1));
   els.btnNext.addEventListener("click", onNextClick);
   els.searchInput.addEventListener("input", debounce(() => applySearch(), 200));
@@ -402,6 +420,10 @@ async function init() {
     if (!revealed && /^[1-4]$/.test(e.key)) {
       const L = LETTERS[Number(e.key) - 1];
       choose(L);
+    }
+    if (revealed && e.key === "Enter" && !els.btnNext.disabled) {
+      e.preventDefault();
+      onNextClick();
     }
   });
 
